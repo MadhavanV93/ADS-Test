@@ -1,0 +1,11 @@
+{
+  "description" : "Calculate shipping price after applicable discount.",
+  "groupId" : "madhavan.v_bluepolaris.com.maddytest.pricing",
+  "locale" : "en_US",
+  "properties" : {
+    "refactoringEnabled" : false,
+    "tags" : [ ],
+    "indexingEnabled" : false
+  },
+  "extraProperties" : { }
+}
