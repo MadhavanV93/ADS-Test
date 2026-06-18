@@ -13,14 +13,14 @@
             <ConditionDefinitions>
                 <ConditionDefinition Id="C0">
                     <ExpressionDefinition>
-                        <Text><![CDATA[the Transport of Method is <a Transport Enums>]]></Text>
+                        <Text><![CDATA[the Transport of 'Method' is <a Transport Enums>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
             </ConditionDefinitions>
             <ActionDefinitions>
                 <ActionDefinition Id="A0">
                     <ExpressionDefinition>
-                        <Text><![CDATA[set decision to <a number>]]></Text>
+                        <Text><![CDATA[set 'decision' to <a number>]]></Text>
                     </ExpressionDefinition>
                 </ActionDefinition>
             </ActionDefinitions>
@@ -46,7 +46,7 @@
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param><![CDATA['Air Costs']]></Param>
+                                <Param><![CDATA['Air Costs Updated']]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
@@ -68,8 +68,8 @@
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
-            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Transport]]></Data>
             <Data Name="Definitions(A0)#HeaderText"><![CDATA[Shipment Base Price]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Transport]]></Data>
         </ResourceSet>
     </Resources>
 </DT>
