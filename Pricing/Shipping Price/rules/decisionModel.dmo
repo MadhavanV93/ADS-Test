@@ -11,8 +11,8 @@
         <description>What is the aggregate costs with applied price multipliers for this shipment?</description>
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment" collection="false" name="Shipment"/>
-                <input bomType="java.lang.String" collection="false" name="Decision 8"/>
+                <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment" collection="false" name="Shipment Updated"/>
+                <input bomType="java.lang.String" collection="false" name="Input 8"/>
                 <output bomType="java.lang.Double" collection="false" name="Price Before Discount"/>
                 <rule defaultRule="false" href="node_1/Price%20Before%20Discount.dmt" kind="DecisionTable" name="Price Before Discount"/>
             </ruleset>
@@ -28,13 +28,13 @@
             <requiredKnowledge href="#node_2"/>
         </knowledgeRequirement>
     </decision>
-    <inputData id="node_4" name="Shipment">
+    <inputData id="node_4" name="Shipment Updated">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment" collection="false" name="Shipment"/>
+                <output bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment" collection="false" name="Shipment Updated"/>
             </initialization>
         </extensionElements>
-        <variable id="node_4_ii" name="Shipment" typeRef="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment"/>
+        <variable id="node_4_ii" name="Shipment Updated" typeRef="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment"/>
     </inputData>
     <decision id="node_5" name="Customer Discount">
         <description>What is the discount for this customer?</description>
@@ -76,14 +76,14 @@
             <requiredInput href="#node_5"/>
         </informationRequirement>
     </decision>
-    <decision id="node_8" name="Decision 8">
+    <inputData id="node_8" name="Input 8">
         <extensionElements>
-            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <output bomType="java.lang.String" collection="false" name="Decision 8"/>
-            </ruleset>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Input 8"/>
+            </initialization>
         </extensionElements>
-        <variable id="node_8_ii" name="Decision 8" typeRef="java.lang.String"/>
-    </decision>
+        <variable id="node_8_ii" name="Input 8" typeRef="java.lang.String"/>
+    </inputData>
     <businessKnowledgeModel id="node_2" name="Shipment Base Price">
         <extensionElements>
             <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
