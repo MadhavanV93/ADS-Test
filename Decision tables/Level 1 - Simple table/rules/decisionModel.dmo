@@ -17,19 +17,20 @@
         </extensionElements>
         <variable id="node_0_ii" name="Achievement" typeRef="java.lang.Long"/>
     </inputData>
-    <decision id="node_1" name="Grade">
+    <decision id="node_1" name="Grade Updated">
         <description>Output a grade (a letter) based on ranges of values. </description>
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="java.lang.Long" collection="false" name="Achievement"/>
-                <output bomType="java.lang.String" collection="false" name="Grade"/>
+                <output bomType="java.lang.String" collection="false" name="Grade Updated"/>
                 <rule defaultRule="false" href="node_1/Grade%20table.dmt" kind="DecisionTable" name="Grade table"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_1_ii" name="Grade" typeRef="java.lang.String"/>
+        <variable id="node_1_ii" name="Grade Updated" typeRef="java.lang.String"/>
         <informationRequirement>
             <requiredInput href="#node_0"/>
         </informationRequirement>
     </decision>
-</definitions></definition>
+</definitions>
+</definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>
