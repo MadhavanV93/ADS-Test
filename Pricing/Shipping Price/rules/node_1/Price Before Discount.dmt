@@ -139,8 +139,8 @@ set 'shipmentBasePrice' to the shipment base price computed from
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
-            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Sipment Base Price]]></Data>
             <Data Name="Definitions(A0)#HeaderText"><![CDATA[Price Before Discount]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Sipment Base Price]]></Data>
         </ResourceSet>
     </Resources>
 </DT>
