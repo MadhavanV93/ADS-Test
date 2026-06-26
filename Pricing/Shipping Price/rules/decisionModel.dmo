@@ -12,6 +12,7 @@
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment" collection="false" name="Shipment"/>
+                <input bomType="java.lang.String" collection="false" name="Decision 8"/>
                 <output bomType="java.lang.Double" collection="false" name="Price Before Discount"/>
                 <rule defaultRule="false" href="node_1/Price%20Before%20Discount.dmt" kind="DecisionTable" name="Price Before Discount"/>
             </ruleset>
@@ -19,6 +20,9 @@
         <variable id="node_1_ii" name="Price Before Discount" typeRef="java.lang.Double"/>
         <informationRequirement>
             <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
         </informationRequirement>
         <knowledgeRequirement>
             <requiredKnowledge href="#node_2"/>
@@ -71,6 +75,14 @@
         <informationRequirement>
             <requiredInput href="#node_5"/>
         </informationRequirement>
+    </decision>
+    <decision id="node_8" name="Decision 8">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <output bomType="java.lang.String" collection="false" name="Decision 8"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_8_ii" name="Decision 8" typeRef="java.lang.String"/>
     </decision>
     <businessKnowledgeModel id="node_2" name="Shipment Base Price">
         <extensionElements>
