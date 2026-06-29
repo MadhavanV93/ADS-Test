@@ -121,26 +121,13 @@ set 'shipmentBasePrice' to the shipment base price computed from
                         </Action>
                     </ActionSet>
                 </Condition>
-                <Condition>
-                    <Expression>
-                        <Text><![CDATA[<an object> is not <an object>]]></Text>
-                        <Param><![CDATA[50000]]></Param>
-                    </Expression>
-                    <ActionSet>
-                        <Action DefId="A0">
-                            <Expression>
-                                <Param><![CDATA[1.9]]></Param>
-                            </Expression>
-                        </Action>
-                    </ActionSet>
-                </Condition>
             </Partition>
         </Contents>
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
-            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Price Before Discount]]></Data>
             <Data Name="Definitions(C0)#HeaderText"><![CDATA[Sipment Base Price]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Price Before Discount]]></Data>
         </ResourceSet>
     </Resources>
 </DT>
