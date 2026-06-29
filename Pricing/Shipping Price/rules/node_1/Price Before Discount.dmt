@@ -22,11 +22,6 @@ set 'shipmentBasePrice' to the shipment base price computed from
                         <Text><![CDATA['shipmentBasePrice' is <an object>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
-                <ConditionDefinition Id="C2">
-                    <ExpressionDefinition>
-                        <Text><![CDATA[the Customer Status of Customer is <a Customer Status Enums> ]]></Text>
-                    </ExpressionDefinition>
-                </ConditionDefinition>
             </ConditionDefinitions>
             <ActionDefinitions>
                 <ActionDefinition Id="A0">
@@ -44,20 +39,13 @@ set 'shipmentBasePrice' to the shipment base price computed from
                         <Param><![CDATA[250]]></Param>
                         <Param/>
                     </Expression>
-                    <Partition DefId="C2">
-                        <Condition>
+                    <ActionSet>
+                        <Action DefId="A0">
                             <Expression>
-                                <Param><![CDATA[Bronze]]></Param>
+                                <Param><![CDATA[1.241]]></Param>
                             </Expression>
-                            <ActionSet>
-                                <Action DefId="A0">
-                                    <Expression>
-                                        <Param><![CDATA[1.241]]></Param>
-                                    </Expression>
-                                </Action>
-                            </ActionSet>
-                        </Condition>
-                    </Partition>
+                        </Action>
+                    </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
@@ -66,20 +54,13 @@ set 'shipmentBasePrice' to the shipment base price computed from
                         <Param><![CDATA[500]]></Param>
                         <Param/>
                     </Expression>
-                    <Partition DefId="C2">
-                        <Condition>
+                    <ActionSet>
+                        <Action DefId="A0">
                             <Expression>
-                                <Param><![CDATA[Bronze]]></Param>
+                                <Param><![CDATA[1.193]]></Param>
                             </Expression>
-                            <ActionSet>
-                                <Action DefId="A0">
-                                    <Expression>
-                                        <Param><![CDATA[1.193]]></Param>
-                                    </Expression>
-                                </Action>
-                            </ActionSet>
-                        </Condition>
-                    </Partition>
+                        </Action>
+                    </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
@@ -88,20 +69,13 @@ set 'shipmentBasePrice' to the shipment base price computed from
                         <Param><![CDATA[1000]]></Param>
                         <Param/>
                     </Expression>
-                    <Partition DefId="C2">
-                        <Condition>
+                    <ActionSet>
+                        <Action DefId="A0">
                             <Expression>
-                                <Param><![CDATA[Bronze]]></Param>
+                                <Param><![CDATA[1.153]]></Param>
                             </Expression>
-                            <ActionSet>
-                                <Action DefId="A0">
-                                    <Expression>
-                                        <Param><![CDATA[1.153]]></Param>
-                                    </Expression>
-                                </Action>
-                            </ActionSet>
-                        </Condition>
-                    </Partition>
+                        </Action>
+                    </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
@@ -110,20 +84,13 @@ set 'shipmentBasePrice' to the shipment base price computed from
                         <Param><![CDATA[5000]]></Param>
                         <Param/>
                     </Expression>
-                    <Partition DefId="C2">
-                        <Condition>
+                    <ActionSet>
+                        <Action DefId="A0">
                             <Expression>
-                                <Param><![CDATA[Silver]]></Param>
+                                <Param><![CDATA[1.13]]></Param>
                             </Expression>
-                            <ActionSet>
-                                <Action DefId="A0">
-                                    <Expression>
-                                        <Param><![CDATA[1.13]]></Param>
-                                    </Expression>
-                                </Action>
-                            </ActionSet>
-                        </Condition>
-                    </Partition>
+                        </Action>
+                    </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
@@ -132,20 +99,13 @@ set 'shipmentBasePrice' to the shipment base price computed from
                         <Param><![CDATA[10000]]></Param>
                         <Param/>
                     </Expression>
-                    <Partition DefId="C2">
-                        <Condition>
+                    <ActionSet>
+                        <Action DefId="A0">
                             <Expression>
-                                <Param><![CDATA[Silver]]></Param>
+                                <Param><![CDATA[1.1]]></Param>
                             </Expression>
-                            <ActionSet>
-                                <Action DefId="A0">
-                                    <Expression>
-                                        <Param><![CDATA[1.1]]></Param>
-                                    </Expression>
-                                </Action>
-                            </ActionSet>
-                        </Condition>
-                    </Partition>
+                        </Action>
+                    </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
@@ -153,20 +113,13 @@ set 'shipmentBasePrice' to the shipment base price computed from
                         <Param><![CDATA[10000]]></Param>
                         <Param/>
                     </Expression>
-                    <Partition DefId="C2">
-                        <Condition>
+                    <ActionSet>
+                        <Action DefId="A0">
                             <Expression>
-                                <Param><![CDATA[Gold]]></Param>
+                                <Param><![CDATA[1.075]]></Param>
                             </Expression>
-                            <ActionSet>
-                                <Action DefId="A0">
-                                    <Expression>
-                                        <Param><![CDATA[1.075]]></Param>
-                                    </Expression>
-                                </Action>
-                            </ActionSet>
-                        </Condition>
-                    </Partition>
+                        </Action>
+                    </ActionSet>
                 </Condition>
             </Partition>
         </Contents>
@@ -174,7 +127,6 @@ set 'shipmentBasePrice' to the shipment base price computed from
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
             <Data Name="Definitions(C0)#HeaderText"><![CDATA[Sipment Base Price]]></Data>
-            <Data Name="Definitions(C2)#HeaderText"><![CDATA[Customer Status]]></Data>
             <Data Name="Definitions(A0)#HeaderText"><![CDATA[Price Before Discount]]></Data>
         </ResourceSet>
     </Resources>
